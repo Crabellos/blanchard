@@ -234,19 +234,10 @@ document.addEventListener('DOMContentLoaded', function(){
     },
   });
 
-  // Функция ymaps.ready() будет вызвана, когда
-  // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
   ymaps.ready(init);
   function init(){
-      // Создание карты.
       var mapOne = new ymaps.Map("map", {
-          // Координаты центра карты.
-          // Порядок по умолчанию: «широта, долгота».
-          // Чтобы не определять координаты центра карты вручную,
-          // воспользуйтесь инструментом Определение координат.
           center: [55.758468, 37.601088],
-          // Уровень масштабирования. Допустимые значения:
-          // от 0 (весь мир) до 19.
           zoom: 15
       });
 
@@ -257,7 +248,6 @@ document.addEventListener('DOMContentLoaded', function(){
         iconImageOffset: [0, 0]
       });
 
-      // Размещение геообъекта на карте.
       mapOne.geoObjects.add(placemarkOne); 
   }
 });
